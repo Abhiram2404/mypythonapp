@@ -1,7 +1,7 @@
 -- schema.sql
-CREATE DATABASE ccituserdb;
+CREATE DATABASE abhiram;
 
-USE ccituserdb;
+USE abhiram;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,

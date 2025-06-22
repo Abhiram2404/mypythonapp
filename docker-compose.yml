@@ -3,10 +3,10 @@ version: '3.9'
 services:
   mysql:
     image: mysql:8.0
-    container_name: mysql-db
+    container_name: mysql-db-container
     environment:
-      MYSQL_ROOT_PASSWORD: yourpassword
-      MYSQL_DATABASE: blood_bank
+      MYSQL_ROOT_PASSWORD: abhiram123
+      MYSQL_DATABASE: abhiram
     ports:
       - "3306:3306"
     volumes:

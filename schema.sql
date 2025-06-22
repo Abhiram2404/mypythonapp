@@ -1,7 +1,7 @@
 -- schema.sql
-CREATE DATABASE blood_bank;
+CREATE DATABASE ccituserdb;
 
-USE blood_bank;
+USE ccituserdb;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,

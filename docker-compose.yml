@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_DATABASE: blood_bank
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - backend
+
+  flask:
+    build: .
+    container_name: bloodbank-app
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+    networks:
+      - backend
+    volumes:
+      - .:/app
+
+volumes:
+  mysql_data:
+
+networks:
+  backend:
+    driver: bridge
